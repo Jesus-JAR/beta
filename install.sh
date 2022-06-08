@@ -3,7 +3,7 @@
 # variables base de datos
 user="-udebianDB"
 password="-pdebianDB"
-sql="proyecto"
+sql="time_track"
 data="time_track.sql"
 
 # copiar y renombrar env
@@ -20,11 +20,10 @@ sudo chown -R $USER:www-data storage
 sudo chown -R $USER:www-data bootstrap/cache
 chmod -R 775 storage
 chmod -R 775 bootstrap/cache
-## nuevo
-php artisan livewire:publish --assets
 php artisan storage:link
 php artisan config:clear
 php artisan cache:clear
+php artisan livewire:publish --assets
 sudo systemctl reload apache2
 
 # Si tu aplicación en Laravel cuenta con muchas rutas es muy importante que corras el comando
@@ -56,10 +55,3 @@ sleep 2s
 sudo rm -rf /etc/apache2/sites-available/000-default.conf
 sudo cp 000-default.conf /etc/apache2/sites-available/
 sudo systemctl restart apache2
-
-#fallo
-#cd /var/wwww/
-#### COMPROBAR ####
-#sudo ln -s proyecto/public/ html/
-echo terminado
-sleep 5s
