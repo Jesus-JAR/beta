@@ -3,8 +3,8 @@
 # variables base de datos
 user="-udebianDB"
 password="-pdebianDB"
-sql="time_track"
-data="time_track.sql"
+sql="proyecto"
+data="proyecto.sql"
 
 # copiar y renombrar env
 echo renombrar env.example por env y copiar
