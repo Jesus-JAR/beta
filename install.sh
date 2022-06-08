@@ -3,7 +3,7 @@
 # variables base de datos
 user="-udebianDB"
 password="-pdebianDB"
-sql="time_track"
+sql="proyecto"
 data="time_track.sql"
 
 # copiar y renombrar env
