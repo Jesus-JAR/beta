@@ -1,10 +1,19 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 392bd6d8955a4d79e083c8736d219b8bdef14f46
 -- phpMyAdmin SQL Dump
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
+<<<<<<< HEAD
 -- Tiempo de generación: 08-06-2022 a las 16:02:04
 -- Versión del servidor: 10.8.3-MariaDB
+=======
+-- Tiempo de generación: 06-06-2022 a las 09:30:55
+-- Versión del servidor: 10.7.4-MariaDB
+>>>>>>> 392bd6d8955a4d79e083c8736d219b8bdef14f46
 -- Versión de PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -18,7 +27,11 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
+<<<<<<< HEAD
 -- Base de datos: `proyecto`
+=======
+-- Base de datos: `time_track`
+>>>>>>> 392bd6d8955a4d79e083c8736d219b8bdef14f46
 --
 
 -- --------------------------------------------------------
@@ -41,9 +54,15 @@ CREATE TABLE `business` (
 --
 
 INSERT INTO `business` (`id`, `name`, `description`, `address`, `created_at`, `updated_at`) VALUES
+<<<<<<< HEAD
 (1, 'Super Admin', NULL, NULL, '2022-06-08 10:39:23', NULL),
 (2, 'Nintendo', 'Nintendo is one of the leading international interactive entertainment companies, and is focused on the development, production and sale of consoles and video games', '10 Rockefeller Plaza, New York, NY 10020, United States', '2022-06-08 10:39:23', NULL),
 (3, 'Coca-cola', 'Company dedicated to the sale of carbonated drinks', 'Coca Cola Pl SE Atlanta (HQ), GA', '2022-06-08 10:39:23', NULL);
+=======
+(1, 'Admin', NULL, NULL, '2022-06-06 07:30:17', NULL),
+(2, 'Nintendo', 'Nintendo is one of the leading international interactive entertainment companies, and is focused on the development, production and sale of consoles and video games', '10 Rockefeller Plaza, New York, NY 10020, United States', '2022-06-06 07:30:17', NULL),
+(3, 'Coca-cola', 'Company dedicated to the sale of carbonated drinks', 'Coca Cola Pl SE Atlanta (HQ), GA', '2022-06-06 07:30:17', NULL);
+>>>>>>> 392bd6d8955a4d79e083c8736d219b8bdef14f46
 
 -- --------------------------------------------------------
 
@@ -83,12 +102,20 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (3, '2014_10_12_200000_add_two_factor_columns_to_users_table', 1),
 (4, '2019_08_19_000000_create_failed_jobs_table', 1),
 (5, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+<<<<<<< HEAD
 (6, '2022_06_08_100205_create_sessions_table', 1),
 (7, '2022_06_08_102350_create_business_table', 1),
 (8, '2022_06_08_102640_add_cod_emp_to_users', 1),
 (9, '2022_06_08_102709_create_records_table', 1),
 (10, '2022_06_08_104555_create_permission_tables', 2),
 (11, '2022_06_08_124224_add_last_login_to_users', 3);
+=======
+(6, '2022_06_03_192658_create_sessions_table', 1),
+(7, '2022_06_03_193338_create_business_table', 1),
+(8, '2022_06_03_193419_add_cod_emp_to_users', 1),
+(9, '2022_06_03_194156_create_permission_tables', 1),
+(10, '2022_06_03_204723_create_records_table', 1);
+>>>>>>> 392bd6d8955a4d79e083c8736d219b8bdef14f46
 
 -- --------------------------------------------------------
 
@@ -114,6 +141,7 @@ CREATE TABLE `model_has_roles` (
   `model_id` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
 --
 -- Volcado de datos para la tabla `model_has_roles`
 --
@@ -124,6 +152,8 @@ INSERT INTO `model_has_roles` (`role_id`, `model_type`, `model_id`) VALUES
 (3, 'App\\Models\\User', 2),
 (3, 'App\\Models\\User', 4);
 
+=======
+>>>>>>> 392bd6d8955a4d79e083c8736d219b8bdef14f46
 -- --------------------------------------------------------
 
 --
@@ -155,6 +185,7 @@ CREATE TABLE `permissions` (
 --
 
 INSERT INTO `permissions` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
+<<<<<<< HEAD
 (1, 'dashboard', 'web', '2022-06-08 10:39:23', '2022-06-08 10:39:23'),
 (2, 'users.index', 'web', '2022-06-08 10:39:23', '2022-06-08 10:39:23'),
 (3, 'users.show', 'web', '2022-06-08 10:39:23', '2022-06-08 10:39:23'),
@@ -163,6 +194,16 @@ INSERT INTO `permissions` (`id`, `name`, `guard_name`, `created_at`, `updated_at
 (6, 'users.edit', 'web', '2022-06-08 10:39:23', '2022-06-08 10:39:23'),
 (7, 'users.update', 'web', '2022-06-08 10:39:23', '2022-06-08 10:39:23'),
 (8, 'users.destroy', 'web', '2022-06-08 10:39:23', '2022-06-08 10:39:23');
+=======
+(1, 'dashboard', 'web', '2022-06-06 07:30:17', '2022-06-06 07:30:17'),
+(2, 'users.index', 'web', '2022-06-06 07:30:17', '2022-06-06 07:30:17'),
+(3, 'users.show', 'web', '2022-06-06 07:30:17', '2022-06-06 07:30:17'),
+(4, 'users.create', 'web', '2022-06-06 07:30:17', '2022-06-06 07:30:17'),
+(5, 'users.store', 'web', '2022-06-06 07:30:17', '2022-06-06 07:30:17'),
+(6, 'users.edit', 'web', '2022-06-06 07:30:17', '2022-06-06 07:30:17'),
+(7, 'users.update', 'web', '2022-06-06 07:30:17', '2022-06-06 07:30:17'),
+(8, 'users.destroy', 'web', '2022-06-06 07:30:17', '2022-06-06 07:30:17');
+>>>>>>> 392bd6d8955a4d79e083c8736d219b8bdef14f46
 
 -- --------------------------------------------------------
 
@@ -217,10 +258,17 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
+<<<<<<< HEAD
 (1, 'Super Admin', 'web', '2022-06-08 10:39:23', '2022-06-08 10:39:23'),
 (2, 'Admin', 'web', '2022-06-08 10:39:23', '2022-06-08 10:39:23'),
 (3, 'Manager', 'web', '2022-06-08 10:39:23', '2022-06-08 10:39:23'),
 (4, 'Developer', 'web', '2022-06-08 10:39:23', '2022-06-08 10:39:23');
+=======
+(1, 'Super Admin', 'web', '2022-06-06 07:30:17', '2022-06-06 07:30:17'),
+(2, 'Admin', 'web', '2022-06-06 07:30:17', '2022-06-06 07:30:17'),
+(3, 'Manager', 'web', '2022-06-06 07:30:17', '2022-06-06 07:30:17'),
+(4, 'Developer', 'web', '2022-06-06 07:30:17', '2022-06-06 07:30:17');
+>>>>>>> 392bd6d8955a4d79e083c8736d219b8bdef14f46
 
 -- --------------------------------------------------------
 
@@ -274,6 +322,7 @@ CREATE TABLE `sessions` (
   `last_activity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
 --
 -- Volcado de datos para la tabla `sessions`
 --
@@ -281,6 +330,8 @@ CREATE TABLE `sessions` (
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
 ('bW4SYP84KQgDa63zKqhkd7nAPnkaLntUlMLHT9IZ', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Linux x86_64; rv:101.0) Gecko/20100101 Firefox/101.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiUVlOcGp4aEh6RXRPN1haWmR6TTJFZGpTTjFYMWFCMnFHY1BRMkRONyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9kYXNoYm9hcmQiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6MjE6InBhc3N3b3JkX2hhc2hfc2FuY3R1bSI7czo2MDoiJDJ5JDEwJEVBS2J0akZsTHlZVHd4bkZKa3Zmdi53aEplVmlTMnc2Y2JTS05NVGlWTXBHTXBzZkNoYnFpIjt9', 1654692225);
 
+=======
+>>>>>>> 392bd6d8955a4d79e083c8736d219b8bdef14f46
 -- --------------------------------------------------------
 
 --
@@ -292,11 +343,19 @@ CREATE TABLE `users` (
   `cod_emp` bigint(20) UNSIGNED DEFAULT NULL,
   `first_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `last_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+<<<<<<< HEAD
   `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `dni` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `work_hours` int(11) NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
+=======
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email_verified_at` timestamp NULL DEFAULT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `dni` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `work_hours` int(11) DEFAULT NULL,
+>>>>>>> 392bd6d8955a4d79e083c8736d219b8bdef14f46
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `two_factor_secret` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `two_factor_recovery_codes` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -305,6 +364,7 @@ CREATE TABLE `users` (
   `current_team_id` bigint(20) UNSIGNED DEFAULT NULL,
   `profile_photo_path` varchar(2048) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
+<<<<<<< HEAD
   `updated_at` timestamp NULL DEFAULT NULL,
   `last_login` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -320,6 +380,13 @@ INSERT INTO `users` (`id`, `cod_emp`, `first_name`, `last_name`, `phone`, `dni`,
 (4, 3, 'Rorbert', 'Downey', '618012345', '45275834N', 8, 'ironman@manager.es', '2022-06-08 10:39:24', '$2y$10$kAmV.HIC9gwCjAB7S11BOOL7y2wwYShDzAUmUXYVA9gTEevQkY9Q6', NULL, NULL, NULL, 'UunnVh8UPU', NULL, NULL, '2022-06-08 10:39:24', '2022-06-08 10:39:24', NULL);
 
 --
+=======
+  `updated_at` timestamp NULL DEFAULT NULL
+  `last_login` timestamp NULL DEFAULT NULL,
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+>>>>>>> 392bd6d8955a4d79e083c8736d219b8bdef14f46
 -- Índices para tablas volcadas
 --
 
@@ -434,7 +501,11 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT de la tabla `migrations`
 --
 ALTER TABLE `migrations`
+<<<<<<< HEAD
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+=======
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+>>>>>>> 392bd6d8955a4d79e083c8736d219b8bdef14f46
 
 --
 -- AUTO_INCREMENT de la tabla `permissions`
@@ -464,7 +535,11 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+=======
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+>>>>>>> 392bd6d8955a4d79e083c8736d219b8bdef14f46
 
 --
 -- Restricciones para tablas volcadas
