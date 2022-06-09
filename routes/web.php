@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +28,13 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+
+    // users
+    Route::group(['prefix' => 'users'], function($router) {
+        $router->get('/', [UserController::class,'index'])->name('users');
+        $router->post('/', [UserController::class,'store']);
+        $router->put('/{$id}', [UserController::class,'update']);
+        $router->delete('/{$id}', [UserController::class,'destroy']);
+    });
 });

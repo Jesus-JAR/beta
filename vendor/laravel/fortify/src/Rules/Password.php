@@ -12,21 +12,21 @@ class Password implements Rule
      *
      * @var int
      */
-    protected $length = 8;
+    protected $length = 6;
 
     /**
      * Indicates if the password must contain one uppercase character.
      *
      * @var bool
      */
-    protected $requireUppercase = false;
+    protected $requireUppercase = true;
 
     /**
      * Indicates if the password must contain one numeric digit.
      *
      * @var bool
      */
-    protected $requireNumeric = false;
+    protected $requireNumeric = true;
 
     /**
      * Indicates if the password must contain one special character.
