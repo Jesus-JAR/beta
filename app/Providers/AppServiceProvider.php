@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Business;
 use Illuminate\Support\ServiceProvider;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,5 +26,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        $business = Business::all();
+        return view()->share('business', $business);
     }
 }
