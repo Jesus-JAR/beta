@@ -1,6 +1,19 @@
 <div>
               <!-- <table> -->
                 <div class="mt-2">
+                    <div class="flex text-gray-500">
+                        <select wire:model="perPage" class="h-10 mr-2 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                            <option value="">Select</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                        </select>
+                        <x-jet-input id="search" placeholder="Search..." class="block w-full mb-3" type="text"
+                            name="search" wire:model="search"/>
+
+                    </div>
+                    {{ $search }}
                     <table class="border-2 border-gray-200 table-auto w-full">
                         <thead>
                             <tr>
@@ -12,6 +25,12 @@
                                 <th class="px-4 py-2">
                                     <div class="flex items-center cursor-pointer w-20">
                                         <button>First name</button>
+
+                                    </div>
+                                </th>
+                                <th class="px-4 py-2">
+                                    <div class="flex items-center cursor-pointer w-20">
+                                        <button>Last name</button>
 
                                     </div>
                                 </th>

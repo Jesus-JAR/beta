@@ -350,7 +350,7 @@ business:
     - building
     - bullhorn
     - bullseye
-    - bussines-time
+    - business-time
     - cake-candles
     - calculator
     - calendar
@@ -431,7 +431,7 @@ business:
     - trademark
     - vault
     - wallet
-  label: Bussines
+  label: Business
 camping:
   icons:
     - binoculars

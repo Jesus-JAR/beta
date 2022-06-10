@@ -14,6 +14,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="{{asset('icons/fontawesome/css/all.css')}}">
     @livewireStyles
 
     <!-- datatable bootrap

@@ -10,12 +10,17 @@ class LiveUsersTable extends Component
 {
     use WithPagination;
 
+    // Variable
+    public $search;
+    public $perPage;
+
     public function render()
     {
         // llamamos a la vista para mostrar los usuarios
-        $users = User::all();
         return view('livewire.live-users-table', [
-            'users' => User::paginate(2),
+            'users' => User::where('first_name', 'like', "%$this->search%")
+            ->orWhere('last_name', 'like', "%$this->search%")
+            ->paginate($this->perPage),
         ]);
     }
 }
