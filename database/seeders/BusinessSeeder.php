@@ -20,6 +20,7 @@ class BusinessSeeder extends Seeder
         $Admin = DB::table('business')->insert(
             [
                 'name' => 'Super Admin',
+                'address' => 'Home',
                 'created_at' => now(),
             ],
         );
