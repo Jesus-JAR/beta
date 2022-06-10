@@ -13,7 +13,6 @@
                             name="search" wire:model="search"/>
 
                     </div>
-                    {{ $search }}
                     <table class="border-2 border-gray-200 table-auto w-full">
                         <thead>
                             <tr>
