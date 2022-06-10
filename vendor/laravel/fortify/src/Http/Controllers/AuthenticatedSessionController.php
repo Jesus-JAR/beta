@@ -57,6 +57,10 @@ class AuthenticatedSessionController extends Controller
     public function store(LoginRequest $request)
     {
         return $this->loginPipeline($request)->then(function ($request) {
+
+            $request->user()->last_login = now();
+            $request->user()->save();
+
             return app(LoginResponse::class);
         });
     }
