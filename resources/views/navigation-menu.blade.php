@@ -16,8 +16,8 @@
         ],
         [
             'name' => 'Users',
-            'route' => route('users'),
-            'active' => request()->routeIs('users'),
+            'route' => route('users.index'),
+            'active' => request()->routeIs('users.index'),
         ],
 ];
 @endphp

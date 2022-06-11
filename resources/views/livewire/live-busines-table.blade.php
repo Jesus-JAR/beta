@@ -1,6 +1,6 @@
 <div>
     <div class="p-6 sm:px-20 bg-white border-gray-200">
-        <div class="mt-8 text-2xl flex justify-around">
+        <div class="mt-3 text-2xl flex justify-around">
 
             <div class="text-gray-600 font-bold text-2xl md:text-4xl">{{ __('Business') }}</div>
 

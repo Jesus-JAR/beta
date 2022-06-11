@@ -31,13 +31,15 @@ Route::middleware([
     })->name('dashboard');
 
 
-    // users
-    Route::group(['prefix' => 'users'], function($router) {
+    /*    Route::group(['prefix' => 'users'], function($router) {
         $router->get('/', [UserController::class,'index'])->name('users');
         $router->post('/', [UserController::class,'store']);
         $router->put('/{$id}', [UserController::class,'update']);
         $router->delete('/{$id}', [UserController::class,'destroy']);
     });
+*/
+    // users
+    Route::resource('users', UserController::class)->names('users');
 
     // business
 
