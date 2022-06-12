@@ -14,6 +14,9 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
+     <!-- Alpine -->
+     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
     <!-- Icons -->
     <link rel="stylesheet" href="{{asset('icons/fontawesome/css/all.css')}}">
     @livewireStyles
