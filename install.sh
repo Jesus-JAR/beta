@@ -6,12 +6,6 @@ password="debianDB"
 sql="proyecto"
 data="proyecto.sql"
 
-# copiar y renombrar env
-echo renombrar env.example por env y copiar
-sleep 2s
-sudo cp .env.example .env
-php artisan key:generate
-
 # permisos
 #### COMPROBAR el html esta borrado ####
 ln -s proyecto/public/ ../html
@@ -34,6 +28,12 @@ mysqladmin -u $user -p$password create $sql
 mysql -u $user -p$password  $sql < database/$data
 echo Creada e importada base de datos
 sleep 2s
+
+# copiar y renombrar env
+echo renombrar env.example por env y copiar
+sleep 2s
+sudo cp .env.example .env
+php artisan key:generate
 
 sudo php artisan storage:link
 sudo php artisan config:clear
