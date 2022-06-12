@@ -20,12 +20,6 @@ sudo chown -R $USER:www-data storage
 sudo chown -R $USER:www-data bootstrap/cache
 chmod -R 775 storage
 chmod -R 775 bootstrap/cache
-sudo php artisan storage:link
-sudo php artisan config:clear
-sudo php artisan cache:clear
-sudo php artisan livewire:publish --assets
-sudo php artisan key:generate
-sudo systemctl reload apache2
 
 # Si tu aplicación en Laravel cuenta con muchas rutas es muy importante que corras el comando
 #route:cache para mejorar el rendimiento de la aplicación:
@@ -40,6 +34,13 @@ mysqladmin -u $user -p$password create $sql
 mysql -u $user -p$password  $sql < database/$data
 echo Creada e importada base de datos
 sleep 2s
+
+sudo php artisan storage:link
+sudo php artisan config:clear
+sudo php artisan cache:clear
+sudo php artisan livewire:publish --assets
+sudo php artisan key:generate
+sudo systemctl reload apache2
 
 echo composer install y npm install
 sleep 2s
