@@ -1,50 +1,15 @@
 <x-app-layout>
     <div class="antialiased bg-gray-100">
         <a href="{{ route('users.index') }}">
-        <button class="mt-3 ml-3 bg-sea-500 hover:bg-sea-400 text-white font-bold py-2 px-4 border-b-4 border-sea-700 hover:border-sea-500 rounded uppercase">
-            back
-          </button>
+            <button
+                class="mt-3 ml-3 bg-sea-500 hover:bg-sea-400 text-white font-bold py-2 px-4 border-b-4 border-sea-700 hover:border-sea-500 rounded uppercase">
+                back
+            </button>
         </a>
         <div class="flex flex-col w-full  min-h-full justify-center items-center ">
             <div class="mt-4 border-2 bg-ochre-200 border-sea-200 p-8 rounded-lg">
                 <h1 class="font-bold text-ochre-400 text-center">Add New User</h1>
-                <div class="mt-4 flex flex-wrap">
-                    <div class="mt-4 w-full sm:w-auto relative">
-                        <x-jet-label for="first_name" value="{{ __('First name') }}" />
-                        <x-jet-input id="first_name" class="block mt-1 w-full" type="text" name="first_name"
-                            :value="old('first_name')" required autofocus autocomplete="first_name" />
-                    </div>
-                    <div class="mt-4 w-full sm:w-auto relative sm:ml-3">
-                        <x-jet-label for="last_name" value="{{ __('Last name') }}" />
-                        <x-jet-input id="last_name" class="block mt-1 w-full" type="text" name="last_name"
-                            :value="old('last_name')" required autofocus autocomplete="last_name" />
-                    </div>
-                </div>
-
-                <div class="mt-4 flex flex-wrap">
-                    <div class="mt-4 w-full sm:w-auto relative">
-                        <x-jet-label for="first_name" value="{{ __('First name') }}" />
-                        <x-jet-input id="first_name" class="block mt-1 w-full" type="text" name="first_name"
-                            :value="old('first_name')" required autofocus autocomplete="first_name" />
-                    </div>
-                    <div class="mt-4 w-full sm:w-auto relative sm:ml-3">
-                        <x-jet-label for="last_name" value="{{ __('Last name') }}" />
-                        <x-jet-input id="last_name" class="block mt-1 w-full" type="text" name="last_name"
-                            :value="old('last_name')" required autofocus autocomplete="last_name" />
-                    </div>
-                </div>
-                <div class="mt-4 flex flex-wrap">
-                    <div class="mt-4 w-full sm:w-auto relative">
-                        <x-jet-label for="first_name" value="{{ __('First name') }}" />
-                        <x-jet-input id="first_name" class="block mt-1 w-full" type="text" name="first_name"
-                            :value="old('first_name')" required autofocus autocomplete="first_name" />
-                    </div>
-                    <div class="mt-4 w-full sm:w-auto relative sm:ml-3">
-                        <x-jet-label for="last_name" value="{{ __('Last name') }}" />
-                        <x-jet-input id="last_name" class="block mt-1 w-full" type="text" name="last_name"
-                            :value="old('last_name')" required autofocus autocomplete="last_name" />
-                    </div>
-                </div>
+                @livewire('form')
             </div>
         </div>
     </div>

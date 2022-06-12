@@ -12,13 +12,13 @@
             <div class="container mt-4 flex space-x-2">
                 <div class="mt-4 relative">
                     <x-jet-label for="first_name" value="{{ __('First name') }}" />
-                    <x-jet-input id="first_name" class="block mt-1 w-full" type="text" name="first_name" :value="old('first_name')" required
-                        autofocus autocomplete="first_name" />
+                    <x-jet-input id="first_name" class="block mt-1 w-full" type="text" name="first_name"
+                        :value="old('first_name')" required autofocus autocomplete="first_name" />
                 </div>
                 <div class="mt-4 relative pl-3">
                     <x-jet-label for="last_name" value="{{ __('Last name') }}" />
-                    <x-jet-input id="last_name" class="block mt-1 w-full" type="text" name="last_name" :value="old('last_name')" required
-                        autofocus autocomplete="last_name" />
+                    <x-jet-input id="last_name" class="block mt-1 w-full" type="text" name="last_name" :value="old('last_name')"
+                        required autofocus autocomplete="last_name" />
                 </div>
             </div>
 
@@ -26,7 +26,8 @@
             <div class="container mt-4 flex space-x-2">
                 <div class="mt-4 relative">
                     <x-jet-label for="email" value="{{ __('Email') }}" />
-                    <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+                    <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
+                        required />
                 </div>
                 <div class="mt-4 relative pl-3">
                     <x-jet-label for="phone" value="{{ __('Phone:') }}" />
@@ -41,9 +42,9 @@
                     class="block mt-1 w-full border-gray-300 focus:border-sea-300 focus:ring focus:ring-sea-200 focus:ring-opacity-50 rounded-md shadow-sm"
                     placeholder="Regular input">
                     <option value="">Select Company</option>
-                    @foreach($business as $company)
-                    <option value="{{$company->id}}">{{$company->name}}</option>
-                @endforeach
+                    @foreach ($business as $company)
+                        <option value="{{ $company->id }}">{{ $company->name }}</option>
+                    @endforeach
 
                 </select>
             </div>

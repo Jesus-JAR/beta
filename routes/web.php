@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\BusinessController;
 use App\Http\Controllers\UserController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -17,9 +19,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+$users = User::all()->isEmpty();
+if ($users){
+    Route::get('/', [InicioAppController::class, 'create']);
+    Route::post('/', [InicioAppController::class, 'store']);
+}else{
+    Route::get('/', function () {
+        return view('welcome');
+    })->name('welcome');
+}
+
 
 Route::middleware([
     'auth:sanctum',

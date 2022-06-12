@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Actions\Fortify\PasswordValidationRules;
+use App\Rules\ValidationName;
+use App\Rules\ValidationPhone;
+
+use Illuminate\Support\Facades\Validator;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Livewire\WithPagination;
@@ -9,6 +14,10 @@ use Livewire\WithPagination;
 class UserController extends Controller
 {
     use WithPagination;
+    use PasswordValidationRules;
+
+    public $first_name, $last_name, $email, $phone, $cod_emp, $password, $work_hours;
+
 
     // Variable
     public $search;
@@ -25,8 +34,8 @@ class UserController extends Controller
         // mostramos los datos en una tabla
         return view('users.index', [
             'users' => User::where('first_name', 'like', "%$this->search%")
-            ->orWhere('last_name', 'like', "%$this->search%")
-            ->paginate($this->perPage),
+                ->orWhere('last_name', 'like', "%$this->search%")
+                ->paginate($this->perPage),
         ]);
     }
 
@@ -41,6 +50,8 @@ class UserController extends Controller
         return view('users.create');
     }
 
+
+
     /**
      * Store a newly created resource in storage.
      *
@@ -49,19 +60,20 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        //$datosUsers = request()->all();
-        $datosUsers = request()->except('_token');
-        return User::create([
+        $user = new User();
+        $user->first_name = $this->first_name;
+
+        $user = User::create([
             'first_name' => ucfirst(trans($request['first_name'])),
             'last_name' => ucfirst(trans($request['last_name'])),
             'email' => $request['email'],
             'password' => $request['password'],
             'cod_emp' => $request['business'],
             'phone' => $request['phone'],
-            'work_hours' => $request['work_hours'],
+        ])->assignRole('Developer');
+        $user->sendEmailVerificationNotification();
 
-        ]);
+        return redirect()->route('users.index');
     }
 
     /**
@@ -107,5 +119,9 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+        $user = User::find($id);
+        //dd($user);
+        $user->delete();
+        return redirect()->route('users.index');
     }
 }

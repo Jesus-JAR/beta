@@ -6,7 +6,7 @@
 
 
             <button
-                class="bg-green-600 hover:bg-green-500 text-white font-bold py-1 px-2 border-b-4 border-green-700 hover:border-green-500 rounded">
+                class="bg-sea-600 hover:bg-sea-500 text-white font-bold py-1 px-2 border-b-4 border-sea-700 hover:border-sea-500 rounded">
                 <a href="">Add New Business</a>
             </button>
         </div>
