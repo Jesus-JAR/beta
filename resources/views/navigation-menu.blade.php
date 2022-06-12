@@ -94,8 +94,8 @@
          'active' => request()->routeIs('welcome')],
         [
             'name' => 'Inicio app',
-            'route' => route('app.inicio_app'),
-            'active' => request()->routeIs('app.inicio_app'),
+            'route' => route('users.inicio_app'),
+            'active' => request()->routeIs('users.inicio_app'),
         ],
     ];
 }

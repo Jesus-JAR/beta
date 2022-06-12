@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\BusinessController;
+use App\Http\Controllers\InicioAppController;
 use App\Http\Controllers\UserController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -19,15 +21,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-$users = User::all()->isEmpty();
-if ($users){
-    Route::get('/', [InicioAppController::class, 'create']);
-    Route::post('/', [InicioAppController::class, 'store']);
-}else{
-    Route::get('/', function () {
-        return view('welcome');
-    })->name('welcome');
-}
+    $users = User::all()->isEmpty();
+    if ($users){
+        Route::get('/', [InicioAppController::class, 'create']);
+        Route::post('/', [InicioAppController::class, 'store']);
+    }else{
+        Route::get('/', function () {
+            return view('welcome');
+        })->name('welcome');
+
 
 
 Route::middleware([
@@ -55,3 +57,5 @@ Route::middleware([
     Route::resource('business', BusinessController::class)->names('business');
 
 });
+
+}
